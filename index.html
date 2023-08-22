@@ -23,14 +23,7 @@
 <body>
   
 
-  <h1 style="
-  font-family:Roboto;
-  font-weight: bold;
-  background: linear-gradient(45deg, white, #bdc546);
--webkit-background-clip: text;
-  color: transparent;
-  margin-top: 90px; text-align: center; font-size: 70px;"
-  >APieDeCampoUDS</h1>
+  <h1>APieDeCampoUDS</h1>
 
 
   <div class="image-container">
@@ -47,7 +40,26 @@
 
 
 <style>
-
+        h1 {
+        font-family:Roboto;
+      font-weight: bold;
+      background: linear-gradient(45deg, white, #bdc546);-webkit-background-clip: text;
+      color: transparent;
+    margin-top: 90px; 
+    text-align: center; 
+    font-size: 70px;
+      }
+    @media (max-width: 600px) {
+      h1 {
+        font-family:Roboto;
+      font-weight: bold;
+      background: linear-gradient(45deg, white, #bdc546);-webkit-background-clip: text;
+      color: transparent;
+    margin-top: 90px; 
+    text-align: center; 
+    font-size: 40px;
+      }
+    }
 .image-container {
   text-align: center;
   padding: 20px;
@@ -200,7 +212,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 0px 0;
-  position: fixed;
+  position: static;
   bottom: 0;
   left: 0;
   width: 100%;
