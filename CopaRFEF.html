@@ -65,7 +65,23 @@
   </div>
   <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
     <div class="rectanguloStats">
-     <p class="stats" style="color: white;">⚽  52' Javi Navas</p>
+     <p class="stats" style="color: white;">⚽  52' Javi Navas (Diego Benito)</p>
+     <p class="stats" style="color: white; ">59'
+      <span class="arrow-out-Fuera"></span> Gustavo
+      <span class="arrow-in-Fuera"></span> Caramelo
+    </p>
+    <p class="stats" style="color: white; ">59'
+      <span class="arrow-out-Fuera"></span> Diego Benito
+      <span class="arrow-in-Fuera"></span> Martín Galván
+    </p>
+    <p class="stats" style="color: white; ">70'
+      <span class="arrow-out-Fuera"></span> Mati
+      <span class="arrow-in-Fuera"></span> Amaro
+    </p>
+    <p class="stats" style="color: white; ">82'
+      <span class="arrow-out-Fuera"></span> Javi Navas
+      <span class="arrow-in-Fuera"></span> Jorge
+    </p>
   </div>
 </div>
 </div>
@@ -89,13 +105,37 @@
   <img src="Imagenes Clubes/Bembibre.png" alt="Imagen 2" class="imagen-pequena">
 </div>
 <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
-    <div class="rectanguloStatsLeft">
-      <p class="statsLeft" style="color: white; text-align: left; margin-left: 6rem;">
+    <div class="rectanguloStatscasa">
+
+      <p class="statscasa" style="color: white; text-align: left; margin-left: 6rem;">27'
+        <span class="arrow-out-casa"></span> Poveda
+        <span class="arrow-in-casa"></span> Gustavo
+      </p>
+      <p class="statscasa" style="color: white; text-align: left; margin-left: 6rem;">55'
+        <span class="arrow-out-casa"></span> Mati
+        <span class="arrow-in-casa"></span> Amaro
+      </p>
+      <p class="statscasa" style="color: white; text-align: left; margin-left: 6rem;">55'
+        <span class="arrow-out-casa"></span> Diego Benito
+        <span class="arrow-in-casa"></span> Martín Galván
+      </p>
+
+
+      <p class="statscasa" style="color: white; text-align: left; margin-left: 6rem;">
         <span class="square" style="  width: 10px; height: 14px; display: inline-block; background-color: yellow; margin-right: 5px;"></span> 74' Alberto Durán
       </p>
-      <p class="statsLeft" style="color: white; text-align: left; margin-left: 6rem;">
+
+      <p class="statscasa" style="color: white; text-align: left; margin-left: 6rem;">77'
+        <span class="arrow-out-casa"></span> Alvarito
+        <span class="arrow-in-casa"></span> Jorge
+      </p>
+      <p class="statscasa" style="color: white; text-align: left; margin-left: 6rem;">77'
+        <span class="arrow-out-casa"></span> Miguelito
+        <span class="arrow-in-casa"></span> Souley
+      </p>
+      <p class="statscasa" style="color: white; text-align: left; margin-left: 6rem;">
         <span class="square" style="  width: 10px; height: 14px; display: inline-block; background-color: red; margin-right: 5px;"></span> 82' Jehu Chiapas
-      </p>     <p class="statsLeft" style="color: white; text-align: left; margin-left: 6rem;"> ⚽  91' Caramelo</p>
+      </p>     <p class="statscasa" style="color: white; text-align: left; margin-left: 6rem;"> ⚽  91' Caramelo</p>
   </div>
 </div>
 
@@ -172,6 +212,56 @@
 
 
 <style> 
+
+
+.arrow-out-casa{
+  width: 2px;
+  height: 2px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid red;
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+
+}
+
+.arrow-in-casa {
+  width: 2px;
+  height: 2px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid green;
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+
+}
+
+.arrow-out-Fuera {
+  width: 2px;
+  height: 2px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid red;
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+
+}
+
+.arrow-in-Fuera {
+  width: 2px;
+  height: 2px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid green;
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+
+}
+
 .square {
   width: 10px;
   height: 10px;
@@ -215,7 +305,7 @@
   margin-bottom: 3rem;
 }
 
-.rectanguloStatsLeft {
+.rectanguloStatscasa {
   background-color: rgba(0, 0, 0, 0.459); /* Fondo semitransparente */
   height: auto;
   border: 2px solid #ccc;
@@ -264,7 +354,7 @@
       margin-right: 5px;
     }
 
-    .rectanguloStatsLeft {
+    .rectanguloStatscasa {
         background-color: rgba(0, 0, 0, 0.459);
     height: auto;
     border: 2px solid #ccc;
@@ -302,7 +392,7 @@
        }
 
 
-       .statsLeft{
+       .statscasa{
       text-align: right;
       font-size: 16px;
       color: white;
@@ -364,7 +454,7 @@
       margin-left: 2rem !important;
       margin-right: 2rem !important;     }
 
-       .statsLeft{
+       .statscasa{
       text-align: left;
       font-size: 16px;
       color: white;
