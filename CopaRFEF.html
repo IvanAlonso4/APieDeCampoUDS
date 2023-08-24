@@ -54,13 +54,16 @@
     <p class="numeroEstadio" style="color: white; text-align: center;">Estadio Los Barreros </p>
     <p class="numeroCF" style="color: white; text-align: center; margin-left: 11rem;">✈</p>
 
-
-    <button id="infoButton">ℹ️</button>
-
-      <div id="popup" class="popup">
+    <div class="popup-container">
+      <button class="infoButton" style="    background-color: transparent;cursor: pointer;border: none;font-size: 1.5rem;">
+        ℹ️
+      </button>
+  
+      <div class="popup">
         <img  class="img_match" src="PartidosCopaRFEF/PLANTILLA ONCE Villaralbo.png" alt="Información adicional">
         <span  style="    border: 2px solid; width: 50%; margin-left: 25%;"id="closePopup" class="closePopup">Cerrar</span>
       </div>
+    </div>
 
 
   </div>
@@ -104,6 +107,21 @@
 <p class="numeroFecha" style="color: white; margin-left: 2rem;">20/08/2023</p>
     <p class="numeroEstadio" style="color: white; text-align: center;">Estadio Helmántico </p>
    <p class="numeroCF" style="color: white; text-align: center; margin-left: 11rem;">🏠</p>
+
+
+
+  <div class="popup-container">
+    <button class="infoButton" style="    background-color: transparent;cursor: pointer;border: none;font-size: 1.5rem;">
+      ℹ️
+    </button>
+
+    <div class="popup">
+      <img  class="img_match" src="PartidosCopaRFEF/PLANTILLA ONCE Bembibre.png" alt="Información adicional">
+      <span  style="    border: 2px solid; width: 50%; margin-left: 25%;"id="closePopup" class="closePopup">Cerrar</span>
+    </div>
+  </div>
+
+
 </div>
 <div class="rectangulo">
   <img src="uds.png" alt="Imagen 1" class="imagen-pequena">
@@ -225,19 +243,19 @@
 
 
 <script>
-    const infoButton = document.getElementById("infoButton");
-    const popup = document.getElementById("popup");
-    const closePopup = document.getElementById("closePopup");
+  const infoButtons = document.querySelectorAll(".infoButton");
+  const popups = document.querySelectorAll(".popup");
+  const closePopups = document.querySelectorAll(".closePopup");
 
-    infoButton.addEventListener("click", () => {
-      popup.style.display = "block";
+  infoButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      popups[index].style.display = "block";
     });
 
-    closePopup.addEventListener("click", () => {
-      popup.style.display = "none";
+    closePopups[index].addEventListener("click", () => {
+      popups[index].style.display = "none";
     });
-
-
+  });
 </script>
 
 <style> 
@@ -245,7 +263,10 @@
 .img_match {
   max-width: 80%;
 }
-
+.popup-container {
+    position: relative;
+    display: inline-block;
+  }
 .popup {
   display: none;
   position: fixed;
