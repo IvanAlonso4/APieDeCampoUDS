@@ -53,6 +53,16 @@
     <p class="numeroFecha" style="color: white; margin-left: 2rem;">13/08/2023</p>
     <p class="numeroEstadio" style="color: white; text-align: center;">Estadio Los Barreros </p>
     <p class="numeroCF" style="color: white; text-align: center; margin-left: 11rem;">✈</p>
+
+
+    <button id="infoButton">ℹ️</button>
+
+      <div id="popup" class="popup">
+        <img  class="img_match" src="PLANTILLA ONCE IDEAL.png" alt="Información adicional">
+        <span id="closePopup" class="closePopup">Cerrar</span>
+      </div>
+
+
   </div>
   <div class="rectangulo">
     <img src="Imagenes Clubes/villaralbo.jpeg" alt="Imagen 1" class="imagen-pequena">
@@ -211,7 +221,60 @@
   </script>
 
 
+<script>
+    const infoButton = document.getElementById("infoButton");
+    const popup = document.getElementById("popup");
+    const closePopup = document.getElementById("closePopup");
+
+    infoButton.addEventListener("click", () => {
+      popup.style.display = "block";
+    });
+
+    closePopup.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+
+
+</script>
+
 <style> 
+
+.img_match {
+  max-width: 80%;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 1rem;
+  width: 100% ;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.closePopup {
+  display: block;
+  margin-top: 5px;
+  text-align: center;
+  margin-top: 5px;
+  color: white;
+  cursor: pointer;
+  background-color: rgb(102, 102, 102);
+  padding: 3px;
+}
+
+#infoButton {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
 
 
 .arrow-out-casa{
@@ -315,6 +378,10 @@
 }
 
 @media (max-width: 780px) {
+
+    .img_match {
+    max-width: 95%;
+  }
       .content {
         margin: 0; /* Reduce el margen en pantallas pequeñas */
       }
