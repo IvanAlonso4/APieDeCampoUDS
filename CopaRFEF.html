@@ -58,8 +58,8 @@
     <button id="infoButton">ℹ️</button>
 
       <div id="popup" class="popup">
-        <img  class="img_match" src="PLANTILLA ONCE IDEAL.png" alt="Información adicional">
-        <span id="closePopup" class="closePopup">Cerrar</span>
+        <img  class="img_match" src="PartidosCopaRFEF/PLANTILLA ONCE Villaralbo.png" alt="Información adicional">
+        <span  style="    border: 2px solid; width: 50%; margin-left: 25%;"id="closePopup" class="closePopup">Cerrar</span>
       </div>
 
 
@@ -145,6 +145,9 @@
       </p>
       <p class="statscasa" style="color: white; text-align: left; margin-left: 6rem;">
         <span class="square" style="  width: 10px; height: 14px; display: inline-block; background-color: red; margin-right: 5px;"></span> 82' Jehu Chiapas
+        <p class="statscasa" style="color: white; text-align: left; margin-left: 6rem;">
+          <span class="square" style="  width: 10px; height: 14px; display: inline-block; background-color: yellow; margin-right: 5px;"></span> 89' Souley
+        </p>
       </p>     <p class="statscasa" style="color: white; text-align: left; margin-left: 6rem;"> ⚽  91' Caramelo (Martín Galván)</p>
   </div>
 </div>
@@ -251,7 +254,7 @@
   transform: translate(-50%, -50%);
   background-color: transparent;
   padding: 1rem;
-  width: 100% ;
+  width: 70% ;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -382,6 +385,20 @@
     .img_match {
     max-width: 95%;
   }
+
+  .popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 1rem;
+  width: 100% ;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
       .content {
         margin: 0; /* Reduce el margen en pantallas pequeñas */
       }
