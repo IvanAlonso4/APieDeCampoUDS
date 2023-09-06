@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="APieDeCampo.png" type="image/x-icon" sizes="16x16">
+<link rel="icon" href="../APieDeCampo.png" type="image/x-icon" sizes="16x16">
 <link rel="shortcut icon" href="../APieDeCampo.png" type="image/x-icon" sizes="16x16">
 
   <link rel="stylesheet" href="styles.css">
@@ -17,6 +17,7 @@
       <li><a href="../CopaRFEF.html">🏆<br> Copa RFEF</a></li>
       <li><a href="../PrimeraVuelta.html"> 📈<br> Primera Vuelta</a></li>
       <li><a href="../SegundaVuelta.html"> 📉 <br> Segunda Vuelta</a></li>
+      <li><a href="../Clasificacion.html"> 📋 <br> Clasificación</a></li>
       <li><a href="../Plantilla2324.html"> 👥 <br> Plantilla 23 / 24</a></li>
     </ul>
   </nav>
@@ -46,7 +47,7 @@
         <tbody>
           <tr><td>Jon Villanueva</td><td>0</td></tr>
           <tr><td>Moha</td><td>0</td></tr>
-          <tr><td>Miguelito</td><td>1</td></tr>
+          <tr><td>Miguelito</td><td>0</td></tr>
           <tr><td>Felix</td><td>0</td></tr>
           <tr><td>Gustavo</td><td>0</td></tr>
           <tr><td>Victor Poveda</td><td>0</td></tr>
@@ -54,11 +55,11 @@
           <tr><td>Mansour</td><td>0</td></tr>
           <tr><td>Souley</td><td>2</td></tr>
           <tr><td>Mati</td><td>0</td></tr>
-          <tr><td>Diego Benito</td><td>0</td></tr>
+          <tr><td>Diego Benito</td><td>1</td></tr>
           <tr><td>Amaro</td><td>0</td></tr>
           <tr><td>Trejo</td><td>0</td></tr>
           <tr><td>Carlos Cristeto</td><td>0</td></tr>
-          <tr><td>Alvarito</td><td>0</td></tr>
+          <tr><td>Alvarito</td><td>1</td></tr>
           <tr><td>Caramelo</td><td>0</td></tr>
           <tr><td>Fassani</td><td>0</td></tr>
           <tr><td>Javi Navas</td><td>0</td></tr>
@@ -66,6 +67,29 @@
           <tr><td>Jorge de Vicente</td><td>1</td></tr>
             
             
+        </tbody>
+      </table>
+
+
+      <table id="tableDatos" style="margin-top: 100px;">
+        <thead>
+          <tr>
+            <th style="background-color: rgb(199, 195, 195)"><b>MINUTOS</th>
+            <th style="background-color: rgb(238, 241, 15)"><button onclick="sortTable(1)"><b>AMARILLAS</b></button></th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>0 - 10</td><td>0</td></tr>
+          <tr><td>10 - 20</td><td>0</td></tr>
+          <tr><td>20 - 30</td><td>0</td></tr>
+          <tr><td>30 - 40</td><td>0</td></tr>
+          <tr><td>40 - 50</td><td>1</td></tr>
+          <tr><td>50 - 60</td><td>1</td></tr>
+          <tr><td>60 - 70</td><td>0</td></tr>
+          <tr><td>70 - 80</td><td>3</td></tr>
+          <tr><td>80 - 90</td><td>1</td></tr>
+         
         </tbody>
       </table>
       </div>
@@ -84,6 +108,29 @@
   function sortTable(colIndex) {
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.querySelector("table");
+    switching = true;
+    while (switching) {
+      switching = false;
+      rows = table.rows;
+      for (i = 1; i < (rows.length - 1); i++) {
+        shouldSwitch = false;
+        x = rows[i].getElementsByTagName("td")[colIndex];
+        y = rows[i + 1].getElementsByTagName("td")[colIndex];
+        if (Number(x.innerHTML) < Number(y.innerHTML)) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+      }
+    }
+  }
+
+  function sortTable2(colIndex) {
+    var table, rows, switching, i, x, y, shouldSwitch;
+    table = document.getElementById("tableDatos");
     switching = true;
     while (switching) {
       switching = false;
