@@ -115,12 +115,36 @@
             </tr>
             <tr>
               <td>Martin Galvan</td>
-              <td>0</td>
+              <td>1</td>
             </tr>
             <tr>
               <td>Jorge De Vicente</td>
               <td>0</td>
             </tr>
+
+
+        </tbody>
+      </table>
+
+      <table id="tableDatos" style="margin-top: 100px;">
+        <thead>
+          <tr>
+            <th style="background-color: rgb(199, 195, 195)"><b>MINUTOS</th>
+            <th style="background-color: rgb(238, 241, 15)"><button onclick="sortTable2(1)"><b>AMARILLAS</b></button></th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>0 - 10</td><td>0</td></tr>
+          <tr><td>10 - 20</td><td>0</td></tr>
+          <tr><td>20 - 30</td><td>0</td></tr>
+          <tr><td>30 - 40</td><td>0</td></tr>
+          <tr><td>40 - 50</td><td>0</td></tr>
+          <tr><td>50 - 60</td><td>0</td></tr>
+          <tr><td>60 - 70</td><td>1</td></tr>
+          <tr><td>70 - 80</td><td>0</td></tr>
+          <tr><td>80 - 90</td><td>0</td></tr>
+         
         </tbody>
       </table>
       </div>
@@ -139,6 +163,29 @@
   function sortTable(colIndex) {
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.querySelector("table");
+    switching = true;
+    while (switching) {
+      switching = false;
+      rows = table.rows;
+      for (i = 1; i < (rows.length - 1); i++) {
+        shouldSwitch = false;
+        x = rows[i].getElementsByTagName("td")[colIndex];
+        y = rows[i + 1].getElementsByTagName("td")[colIndex];
+        if (Number(x.innerHTML) < Number(y.innerHTML)) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+      }
+    }
+  }
+
+  function sortTable2(colIndex) {
+    var table, rows, switching, i, x, y, shouldSwitch;
+    table = document.getElementById("tableDatos");
     switching = true;
     while (switching) {
       switching = false;
