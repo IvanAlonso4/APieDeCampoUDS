@@ -115,7 +115,6 @@
       </tbody>  </table>
 
 </div>
-
 <script>
   // Ruta al archivo Excel dentro de tu proyecto
   var archivoExcel = 'SALAMANCA UDS 2324.xlsx';
@@ -142,16 +141,35 @@
           var jsonData = XLSX.utils.sheet_to_json(hoja);
 
           // Construir la tabla HTML
-          for (var i = 0; i < jsonData.length; i++) {
-              var row = tbody.insertRow(i);
-              for (var prop in jsonData[i]) {
+          jsonData.forEach(function (fila) {
+              var row = tbody.insertRow();
+              for (var prop in fila) {
                   var cell = row.insertCell();
-                  cell.innerHTML = jsonData[i][prop];
+                  cell.innerHTML = fila[prop];
               }
-          }
+
+              // Aplicar colores a la fila basados en el valor de "POS"
+              var posicion = fila["POS"];
+              var colorFondo = "";
+
+              if (posicion === 1) {
+                  colorFondo = "green";
+              } else if (posicion >= 2 && posicion <= 6) {
+                  colorFondo = "rgb(36, 221, 36)";
+              } else if (posicion >= 6 && posicion <= 9) {
+                  colorFondo = "gray";
+              } else {
+                  colorFondo = "red";
+              }
+
+              // Aplicar el color de fondo a la primera celda (columna "POS")
+              row.cells[0].style.backgroundColor = colorFondo;
+          });
       };
+
       xhr.send();
   }
+
   // Llamar a la función para cargar la hoja 12
   cargarHoja12();
 </script>
