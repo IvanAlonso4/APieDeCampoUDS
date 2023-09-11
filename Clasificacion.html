@@ -147,19 +147,22 @@
                   var cell = row.insertCell();
                   cell.innerHTML = fila[prop];
               }
+              var filas = tbody.getElementsByTagName("tr");
 
-              // Aplicar colores a la fila basados en el valor de "POS"
-              var posicion = parseInt(fila["POS"]);
-              var colorFondo = "";
+              // Recorrer las filas y asignar colores basados en el índice de la fila
+              for (var i = 0; i < filas.length; i++) {
+                  var fila = filas[i];
+                  var celdaPos = fila.getElementsByTagName("td")[0]; // La primera celda es "POS"
+                  var posicion = parseInt(celdaPos.textContent);
 
-              if (posicion === 1) {
-                  colorFondo = "green";
-              } else if (posicion >= 2 && posicion <= 6) {
-                  colorFondo = "rgb(36, 221, 36)";
-              } else if (posicion >= 6 && posicion <= 9) {
-                  colorFondo = "gray";
-              } else {
-                  colorFondo = "red";
+                  // Asignar colores basados en el índice de la fila
+                  if (posicion === 1) {
+                      fila.style.backgroundColor = "green";
+                  } else if (posicion >= 2 && posicion <= 5) {
+                      fila.style.backgroundColor = "rgb(36, 221, 36)";
+                  } else {
+                      fila.style.backgroundColor = "red";
+                  }
               }
 
               // Aplicar el color de fondo a la primera celda (columna "POS")
