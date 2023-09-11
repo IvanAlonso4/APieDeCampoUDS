@@ -121,61 +121,61 @@
 
   // Función para cargar y procesar la hoja específica
   function cargarHoja12() {
-      var tabla = document.getElementById('tablaClasif');
-      var tbody = tabla.querySelector('tbody');
+    var tabla = document.getElementById('tablaClasif');
+    var tbody = tabla.querySelector('tbody');
 
-      // Cargar el archivo Excel
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', archivoExcel, true);
-      xhr.responseType = 'arraybuffer';
+    // Cargar el archivo Excel
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', archivoExcel, true);
+    xhr.responseType = 'arraybuffer';
 
-      xhr.onload = function (e) {
-          var arraybuffer = xhr.response;
-          var data = new Uint8Array(arraybuffer);
-          var workbook = XLSX.read(data, { type: 'array' });
+    xhr.onload = function (e) {
+      var arraybuffer = xhr.response;
+      var data = new Uint8Array(arraybuffer);
+      var workbook = XLSX.read(data, { type: 'array' });
 
-          // Acceder a la hoja número 12 (índice 11)
-          var hoja = workbook.Sheets[workbook.SheetNames[11]];
+      // Acceder a la hoja número 12 (índice 11)
+      var hoja = workbook.Sheets[workbook.SheetNames[11]];
 
-          // Convertir la hoja a un array de objetos
-          var jsonData = XLSX.utils.sheet_to_json(hoja);
+      // Convertir la hoja a un array de objetos
+      var jsonData = XLSX.utils.sheet_to_json(hoja);
 
-          // Construir la tabla HTML
-          jsonData.forEach(function (fila) {
-              var row = tbody.insertRow();
-              for (var prop in fila) {
-                  var cell = row.insertCell();
-                  cell.innerHTML = fila[prop];
-              }
-              var filas = tbody.getElementsByTagName("tr");
+      // Construir la tabla HTML con los datos de Excel
+      jsonData.forEach(function (fila) {
+        var row = tbody.insertRow();
+        for (var prop in fila) {
+          var cell = row.insertCell();
+          cell.innerHTML = fila[prop];
+        }
+      });
 
-              // Recorrer las filas y asignar colores basados en el índice de la fila
-              for (var i = 0; i < filas.length; i++) {
-                  var fila = filas[i];
-                  var celdaPos = fila.getElementsByTagName("td")[0]; // La primera celda es "POS"
-                  var posicion = parseInt(celdaPos.textContent);
+      // Obtener todas las filas de la tabla
+      var filas = tbody.getElementsByTagName("tr");
 
-                  // Asignar colores basados en el índice de la fila
-                  if (posicion === 1) {
-                      fila.style.backgroundColor = "green";
-                  } else if (posicion >= 2 && posicion <= 5) {
-                      fila.style.backgroundColor = "rgb(36, 221, 36)";
-                  } else {
-                      fila.style.backgroundColor = "red";
-                  }
-              }
+      // Recorrer las filas y asignar colores basados en el índice de la fila
+      for (var i = 0; i < filas.length; i++) {
+        var fila = filas[i];
+        var celdaPos = fila.querySelector("td:first-child"); // La primera celda es "POS"
+        var posicion = parseInt(celdaPos.textContent);
 
-              // Aplicar el color de fondo a la primera celda (columna "POS")
-              row.cells[0].style.backgroundColor = colorFondo;
-          });
-      };
+        // Asignar colores basados en el índice de la fila
+        if (posicion === 1) {
+          celdaPos.style.backgroundColor = "green";
+        } else if (posicion >= 2 && posicion <= 5) {
+          celdaPos.style.backgroundColor = "rgb(36, 221, 36)";
+        } else {
+          celdaPos.style.backgroundColor = "red";
+        }
+      }
+    };
 
-      xhr.send();
+    xhr.send();
   }
 
   // Llamar a la función para cargar la hoja 12
   cargarHoja12();
 </script>
+
 
           <footer>
         <div>
