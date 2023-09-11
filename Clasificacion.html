@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="APieDeCampo.png" type="image/x-icon" sizes="16x16">
 <link rel="shortcut icon" href="APieDeCampo.png" type="image/x-icon" sizes="16x16">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 
-  <link rel="stylesheet" href="styles.css">
-  <title>APieDeCampoUDS</title>
+
+<title>APieDeCampoUDS</title>
 </head>
 <header>
   <nav>
@@ -58,28 +59,98 @@
 	}
 </style>
 <div class="table-responsive">
-  <table class="tableizer-table">
-<thead><tr class="tableizer-firstrow"><th>Posicion</th><th>Equipo</th><th>Partidos Jugados</th><th>Partidos Ganados</th><th>Partidos Empatados</th><th>Partidos Perdidos</th><th>Goles  A Favor</th><th>Goles en Contra</th><th>Diferencia Goles</th><th>Puntos</th></tr></thead><tbody>
- <tr><td style="background-color:green">1</td><td>Atco. Bembibre</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(36, 221, 36)">2</td><td>Atl. Astorga</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(36, 221, 36)">3</td><td>Atlético Tordesillas</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(36, 221, 36)">4</td><td>Becerril</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(36, 221, 36)">5</td><td>Burgos CF B</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(129, 129, 129)">6</td><td>CD. Laguna</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(129, 129, 129)">7</td><td>CD. Villaralbo</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(129, 129, 129)">8</td><td>DiocesanosAvila</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(129, 129, 129)">9</td><td>Júpiter Leonés</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(129, 129, 129)">10</td><td>La Virgen del Camino</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(129, 129, 129)">11</td><td>Mirandés B</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(129, 129, 129)">12</td><td>Palencia CF</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(129, 129, 129)">13</td><td>Palencia Cristo Atlético</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(129, 129, 129)">14</td><td>Ponferradina B</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(129, 129, 129)">15</td><td>Real Ávila</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(224, 52, 52)">16</td><td>Salamanca UDS</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(224, 52, 52)">17</td><td>SD Almazán</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td style="background-color:rgb(224, 52, 52)">18</td><td>UD. Santa Marta</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-</tbody>  </table>
+  <table id="tablaClasif" class="tableizer-table">
+  <thead><tr class="tableizer-firstrow"><th>Pos.</th>
+    <th>Equipo</th>
+    <th><button onclick="sortTable(2)"><b>Puntos</b></button></th>
+    <th><button onclick="sortTable(3)"><b>Partidos Jugados</b></button></th>
+    <th><button onclick="sortTable(4)"><b>Partidos Ganados</b></button></th>
+    <th><button onclick="sortTable(5)"><b>Partidos Empatados</b></button></th>
+    <th><button onclick="sortTable(6)"><b>Partidos Perdidos</b></button></th>
+    <th><button onclick="sortTable(7)"><b>Goles A Favor</b></button></th>
+    <th><button onclick="sortTable(8)"><b>Goles En Contra</b></button></th>
+    <th><button onclick="sortTable(9)"><b>Diferencia de Goles</b></button></th>
+  </thead>
+
+
+ <tr><td style="background-color:green">1</td>
+  <td>Júpiter Leonés</td><td>3</td><td>1</td><td>1</td><td>0</td><td>0</td><td>4</td><td>0</td><td>4</td></tr>
+  <tr><td style="background-color:rgb(36, 221, 36)">2</td>
+    <td>UD. Santa Marta</td><td>3</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>0</td><td>2</td></tr>
+    <tr><td style="background-color:rgb(36, 221, 36)">3</td>
+      <td>Atco. Bembibre</td><td>3</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>1</td><td>1</td></tr>
+      <tr><td style="background-color:rgb(36, 221, 36)">4</td>
+        <td>Becerril</td><td>3</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+        <tr><td style="background-color:rgb(36, 221, 36)">5</td>
+          <td>Atl. Astorga</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+          <tr><td style="background-color:rgb(129, 129, 129)">6</td>
+            <td>Atlético Tordesillas</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+            <tr><td style="background-color:rgb(129, 129, 129)">7</td>
+              <td>CD. Villaralbo</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+              <tr><td style="background-color:rgb(129, 129, 129)">8</td>
+                <td>Mirandés B</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+                <tr><td style="background-color:rgb(129, 129, 129)">9</td>
+                  <td>Palencia CF</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+                  <tr><td style="background-color:rgb(129, 129, 129)">10</td>
+                    <td>Palencia Cristo Atlético</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+                    <tr><td style="background-color:rgb(129, 129, 129)">11</td>
+                      <td>Burgos CF B</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                      <tr><td style="background-color:rgb(129, 129, 129)">12</td>
+                        <td>DiocesanosAvila</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                        <tr><td style="background-color:rgb(129, 129, 129)">13</td>
+                          <td>La Virgen del Camino</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                          <tr><td style="background-color:rgb(129, 129, 129)">14</td>
+                            <td>Salamanca UDS</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td style="background-color:rgb(129, 129, 129)">15</td>
+                              <td>CD. Laguna</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td><td>-1</td></tr>
+                              <tr><td style="background-color:rgb(224, 52, 52)">16</td>
+                                <td>Real Ávila</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>-1</td></tr>
+                                <tr><td style="background-color:rgb(224, 52, 52)">17</td>
+                                  <td>SD Almazán</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>2</td><td>-2</td></tr>
+                                  <tr><td style="background-color:rgb(224, 52, 52)">18</td>
+                                    <td>Ponferradina B</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>4</td><td>-4</td></tr>        
+        </tbody>  </table>
 </div>
+
+<script>
+  // Ruta al archivo Excel dentro de tu proyecto
+  var archivoExcel = 'SALAMANCA UDS 2324.xlsx';
+
+  // Función para cargar y procesar la hoja específica
+  function cargarHoja12() {
+      var tabla = document.getElementById('tablaClasif');
+      var tbody = tabla.querySelector('tbody');
+
+      // Cargar el archivo Excel
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', archivoExcel, true);
+      xhr.responseType = 'arraybuffer';
+
+      xhr.onload = function (e) {
+          var arraybuffer = xhr.response;
+          var data = new Uint8Array(arraybuffer);
+          var workbook = XLSX.read(data, { type: 'array' });
+
+          // Acceder a la hoja número 12 (índice 11)
+          var hoja = workbook.Sheets[workbook.SheetNames[11]];
+
+          // Convertir la hoja a un array de objetos
+          var jsonData = XLSX.utils.sheet_to_json(hoja);
+
+          // Construir la tabla HTML
+          for (var i = 0; i < jsonData.length; i++) {
+              var row = tbody.insertRow(i);
+              for (var prop in jsonData[i]) {
+                  var cell = row.insertCell();
+                  cell.innerHTML = jsonData[i][prop];
+              }
+          }
+      };
+      xhr.send();
+  }
+  // Llamar a la función para cargar la hoja 12
+  cargarHoja12();
+</script>
 
           <footer>
         <div>
@@ -90,42 +161,25 @@
   </body>
 </html>
 
-<script>
-  function sortTable(colIndex) {
-    var table, rows, switching, i, x, y, shouldSwitch;
-    table = document.querySelector("table");
-    switching = true;
-    while (switching) {
-      switching = false;
-      rows = table.rows;
-      for (i = 1; i < (rows.length - 1); i++) {
-        shouldSwitch = false;
-        x = rows[i].getElementsByTagName("td")[colIndex];
-        y = rows[i + 1].getElementsByTagName("td")[colIndex];
-        if (Number(x.innerHTML) < Number(y.innerHTML)) {
-          shouldSwitch = true;
-          break;
-        }
-      }
-      if (shouldSwitch) {
-        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-        switching = true;
-      }
-    }
-  }
 
-  function sortTable2(colIndex) {
-    var table, rows, switching, i, x, y, shouldSwitch;
-    table = document.getElementById("tableDatos");
-    switching = true;
-    while (switching) {
-      switching = false;
-      rows = table.rows;
-      for (i = 1; i < (rows.length - 1); i++) {
-        shouldSwitch = false;
-        x = rows[i].getElementsByTagName("td")[colIndex];
-        y = rows[i + 1].getElementsByTagName("td")[colIndex];
-        if (Number(x.innerHTML) < Number(y.innerHTML)) {
+<script>
+function sortTable(colIndex) {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("tablaClasif");
+  switching = true;
+  
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      var currentRow = rows[i];
+      var nextRow = rows[i + 1];
+      x = rows[i].getElementsByTagName("td")[colIndex];
+      y = rows[i + 1].getElementsByTagName("td")[colIndex];
+      
+      if (Number(x.innerHTML) < Number(y.innerHTML)) {
           shouldSwitch = true;
           break;
         }
@@ -134,25 +188,11 @@
         rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
         switching = true;
       }
-    }
   }
+}
+
 </script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("toggle-menu");
-    const menu = document.querySelector("nav .MenuSecundario");
-  
-    toggleButton.addEventListener("click", function () {
-      menu.classList.toggle("open");
-      if (menu.classList.contains("open")) {
-        toggleButton.textContent = "Cerrar";
-      } else {
-        toggleButton.textContent = "Estadisticas";
-      }
-    });
-  });
-  </script>
 
 
 <style>
@@ -171,14 +211,15 @@
   }
 
   th button {
-      color: black;
+      color: white;
       cursor: pointer;
       border:0;
       background-color: transparent;
+      font-size: 1rem;
     }
 
     th button:hover {
-      color: purple;
+      color: rgb(118, 255, 118);
     }
 
     .image-container {
