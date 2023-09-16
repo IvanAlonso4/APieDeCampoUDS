@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="APieDeCampo.png" type="image/x-icon" sizes="16x16">
+<link rel="shortcut icon" href="APieDeCampo.png" type="image/x-icon" sizes="16x16">
+
+
+  <title>APieDeCampoUDS</title>
+</head>
+<header>
+
+<header>
+  <nav>
+    <ul class="MenuPrincipal">
+      <li><a href="index.html"> 🏠 <br> Inicio </a></li>
+      <li><a href="CopaRFEF.html">🏆<br> Copa RFEF</a></li>
+      <li><a href="PrimeraVuelta.html"> 📈<br> Primera Vuelta</a></li>
+      <li><a href="SegundaVuelta.html"> 📉 <br> Segunda Vuelta</a></li>
+      <li><a href="Calendario.html"> 📅 <br> Calendario</a></li>
+      <li><a href="Clasificacion.html"> 📋 <br> Clasificación</a></li>
+      <li><a href="Plantilla2324.html"> 👥 <br> Plantilla 23 / 24</a></li>
+    </ul>
+  </nav>
+</header>
+
+<h1 style=" margin-top: 3rem;
+font-family:Roboto;
+font-weight: bold;
+background: linear-gradient(45deg, white, #790079);
+-webkit-background-clip: text;
+color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultados 3º RFEF</h1>
+<div class="background-image"></div>
+
+<div class="background-image"></div>
+<body>
+  
+  <select id="jornada">
+          <!-- Opciones para las jornadas -->
+          <option value="1">Jornada 1</option>
+          <option value="2">Jornada 2</option>
+          <option value="3">Jornada 3</option>
+          <option value="4">Jornada 4</option>
+          <option value="5">Jornada 5</option>
+          <option value="6">Jornada 6</option>
+          <option value="7">Jornada 7</option>
+          <option value="8">Jornada 8</option>
+          <option value="9">Jornada 9</option>
+          <option value="10">Jornada 10</option>
+          <option value="11">Jornada 11</option>
+          <option value="12">Jornada 12</option>
+          <option value="13">Jornada 13</option>
+          <option value="14">Jornada 14</option>
+          <option value="15">Jornada 15</option>
+          <option value="16">Jornada 16</option>
+          <option value="17">Jornada 17</option>
+          <option value="18">Jornada 18</option>
+          <option value="19">Jornada 19</option>
+          <option value="20">Jornada 20</option>
+          <option value="21">Jornada 21</option>
+          <option value="22">Jornada 22</option>
+          <option value="23">Jornada 23</option>
+          <option value="24">Jornada 24</option>
+          <option value="25">Jornada 25</option>
+          <option value="26">Jornada 26</option>
+          <option value="27">Jornada 27</option>
+          <option value="28">Jornada 28</option>
+          <option value="29">Jornada 29</option>
+          <option value="30">Jornada 30</option>
+          <option value="31">Jornada 31</option>
+          <option value="32">Jornada 32</option>
+          <option value="33">Jornada 33</option>
+          <option value="34">Jornada 34</option>
+    <!-- Agregar más opciones de jornadas aquí -->
+</select>
+
+<div id="contenedorResultados" style="margin-top: 3rem; align-items: center;">
+    <!-- Los partidos se cargarán aquí mediante JavaScript -->
+</div>
+
+
+</body>
+
+<script>
+    // Función para actualizar los partidos según la jornada seleccionada
+    function actualizarPartidos() {
+        var jornadaSeleccionada = document.getElementById("jornada").value;
+        var contenedorResultados = document.getElementById("contenedorResultados");
+
+        // Limpia el contenedor de resultados
+        contenedorResultados.innerHTML = "";
+
+        if (jornadaSeleccionada === "1") {
+            // Mostrar los partidos para la jornada 1
+            var partido1Jornada1 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/cdLaguna.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">SD. Laguna</p>
+                    <p class="numero" style="font-size: 22px">1</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">2</p>
+                    <p class="numero">Atco. Bembibre</p>
+                    <img src="Imagenes Clubes/Bembibre.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido2Jornada1 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/MirandesB.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Mirandés B</p>
+                    <p class="numero" style="font-size: 22px">1</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">1</p>
+                    <p class="numero">CD. Villaralbo</p>
+                    <img src="Imagenes Clubes/villaralbo.jpeg" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido3Jornada1 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/colegios diocesanos.jpeg" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Diocesanos Avila</p>
+                    <p class="numero" style="font-size: 22px">0</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">0</p>
+                    <p class="numero">Burgos CF B</p>
+                    <img src="Imagenes Clubes/burgosB.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido4Jornada1 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/lavirgendelcamino.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">La Virgen del Camino</p>
+                    <p class="numero" style="font-size: 22px">0</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">0</p>
+                    <p class="numero">Salamanca UDS</p>
+                    <img src="uds.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido5Jornada1 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/atleticoastorga.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Atl. Astorga</p>
+                    <p class="numero" style="font-size: 22px">1</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">1</p>
+                    <p class="numero">Palencia CF</p>
+                    <img src="Imagenes Clubes/palenciacfsad.jpeg" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido6Jornada1 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/santaMarta.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">UD. Santa Marta</p>
+                    <p class="numero" style="font-size: 22px">2</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">0</p>
+                    <p class="numero">Almazán</p>
+                    <img src="Imagenes Clubes/Bembibre.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido7Jornada1 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/PalenciaCristoAtletico.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Palencia Cristo Atlético</p>
+                    <p class="numero" style="font-size: 22px">1</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">1</p>
+                    <p class="numero">Atlético Tordesillas</p>
+                    <img src="Imagenes Clubes/atleticoTordesillas.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido8Jornada1 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/ponferradinaB.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Ponferradina B</p>
+                    <p class="numero" style="font-size: 22px">0</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">4</p>
+                    <p class="numero">Júpiter Leonés</p>
+                    <img src="Imagenes Clubes/cydLeonesa.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido9Jornada1 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo" style="margin-bottom: 5rem!important">
+                    <img src="Imagenes Clubes/CDBecerril.jpeg" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Becerril</p>
+                    <p class="numero" style="font-size: 22px">1</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">0</p>
+                    <p class="numero">Real Ávila</p>
+                    <img src="Imagenes Clubes/RealAvilaa.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            // Agregar partido1 al contenedor
+            contenedorResultados.innerHTML = partido1Jornada1 +partido2Jornada1 + partido3Jornada1 + partido4Jornada1 + partido5Jornada1 + partido6Jornada1 + partido7Jornada1 + partido8Jornada1 + partido9Jornada1;
+        } else if (jornadaSeleccionada === "2") {
+            // Mostrar los partidos para la jornada 2
+            var partido2 = `
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/sdLaguna.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">SD. Laguna</p>
+                    <p class="numero" style="font-size: 22px">111</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">200</p>
+                    <p class="numero">Atco. Bembibre</p>
+                    <img src="Imagenes Clubes/Bembibre.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            `;
+            // Agregar partido2 al contenedor
+            contenedorResultados.innerHTML = partido2;
+        }
+        // Agrega más casos según las jornadas que tengas
+    }
+
+    // Obtén el selector de jornadas y agrega un listener de cambio
+    var jornadaSelector = document.getElementById("jornada");
+    jornadaSelector.addEventListener("change", actualizarPartidos);
+
+    // Llama a la función inicialmente para mostrar los partidos de la jornada predeterminada
+    actualizarPartidos();
+</script>
+
+
+
+  <footer>
+    <div>
+        <p style="display: inline-block;">&copy; 2023 APieDeCampoUDS. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+<style>
+    #jornada {
+      width: 200px;
+      margin: 0 auto;
+      display: block;
+      margin-top: 50px;
+      font-size: 16px;
+      padding: 10px;
+      border: 3px solid #333;
+      border-radius: 5px;
+      background-color: rgb(223, 203, 114);
+      color: #333;
+      font-weight: bold;
+      text-align: center;
+    }
+  
+    body {
+      margin: 0;
+      width: 100%;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-size: cover;
+      overflow: auto;
+    }
+  
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 2rem;
+    }
+  
+    .rectangulo {
+      background-color: rgba(0, 0, 0, 0.459);
+      height: 100px;
+      border: 2px solid #ccc;
+      display: inline-flex;
+      align-items: center;
+      width: 50rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  
+    .partido {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    .escudo {
+      width: 100px;
+      height: auto;
+    }
+  
+    .equipo {
+      flex-grow: 1;
+      text-align: center;
+    }
+  
+    .imagen-pequena {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      border-radius: 50%;
+      margin: 2rem;
+    }
+  
+    .numero,
+    .numeroFecha,
+    .numeroCF,
+    .numeroEstadio {
+      text-align: center;
+      font-size: 24px;
+      display: inline-flex;
+      font-weight: bold;
+      color: white;
+      margin: 2rem;
+    }
+  
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 780px) {
+      .content {
+        margin: 0;
+      }
+      .partido {
+        flex-direction: column;
+        text-align: center;
+      }
+      .escudo {
+        width: 70%;
+      }
+      .rectangulo {
+        background-color: rgba(0, 0, 0, 0.459);
+        height: 100px;
+        border: 2px solid #ccc;
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+        width: auto;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 1rem;
+      }
+      .imagen-pequena {
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        border-radius: 50%;
+        margin: 5px;
+      }
+      .numero {
+        text-align: center;
+        font-size: 18px;
+        display: inline-flex;
+        font-weight: bold;
+        color: white;
+        margin: 4px;
+      }
+    }
+  
+    h1 {
+      font-family: Roboto;
+      font-weight: bold;
+      background: linear-gradient(45deg, white, #bdc546);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-top: 90px;
+      text-align: center;
+      font-size: 70px;
+    }
+  
+    @media (max-width: 780px) {
+      h1 {
+        font-family: Roboto;
+        font-weight: bold;
+        background: linear-gradient(45deg, white, #bdc546);
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-top: 90px;
+        text-align: center;
+        font-size: 40px;
+      }
+    }
+  
+    .image-container {
+      text-align: center;
+    }
+  
+    img {
+      max-width: 50%;
+      margin-bottom: 6rem;
+    }
+  
+    td {
+      color: white;
+    }
+  
+    html {
+      overflow-y: scroll;
+      background-image: url('FondoUds.png');
+      background-color: black;
+      width: 100%;
+      background-size: cover;
+      background-repeat: repeat-y;
+      height: 100vh;
+      z-index: -1;
+    }
+  
+    /*Menu Secundario*/
+    nav .MenuSecundario {
+      display: none;
+    }
+  
+    nav .MenuSecundario.open {
+      display: block;
+    }
+  
+    /* Estilos para el botón */
+    nav .MenuSecundario #toggle-menu {
+      background-color: green;
+      color: red;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  
+    header .MenuSecundario {
+      margin-top: 20px;
+      background-color: black;
+      color: #333;
+      padding: 15px 0;
+      text-align: center;
+    }
+  
+    nav .MenuSecundario ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: black;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    nav ul .MenuSecundario li {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+  
+    nav ul .MenuSecundario li a {
+      display: block;
+      padding: 10px 20px;
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+  
+    nav ul .MenuSecundario li a:hover {
+      background-color: #ff8000;
+      color: rgb(187, 26, 219);
+    }
+  
+    img {
+      max-width: 60%;
+    }
+  
+    footer {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      text-align: center;
+      padding: 0px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  
+    footer img {
+      width: 20px;
+      height: 20px;
+      margin-right: 140px;
+      text-align: right;
+    }
+  </style>
+  
+
+
+
+
+
+
+
+
+
+  <style> 
+
+    .img_match {
+      max-width: 80%;
+    }
+    .popup-container {
+        position: relative;
+        display: inline-block;
+      }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: transparent;
+      padding: 1rem;
+      width: 70% ;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    
+    .closePopup {
+      display: block;
+      margin-top: 5px;
+      text-align: center;
+      margin-top: 5px;
+      color: white;
+      cursor: pointer;
+      background-color: rgb(102, 102, 102);
+      padding: 3px;
+    }
+    
+    #infoButton {
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    
+    
+    
+    
+    .arrow-out-casa{
+      width: 2px;
+      height: 2px;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 5px solid red;
+      display: inline-block;
+      margin-right: 5px;
+      margin-left: 5px;
+    
+    }
+    
+    .arrow-in-casa {
+      width: 2px;
+      height: 2px;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-right: 5px solid green;
+      display: inline-block;
+      margin-right: 5px;
+      margin-left: 5px;
+    
+    }
+    
+    .arrow-out-Fuera {
+      width: 2px;
+      height: 2px;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 5px solid red;
+      display: inline-block;
+      margin-right: 5px;
+      margin-left: 5px;
+    
+    }
+    
+    .arrow-in-Fuera {
+      width: 2px;
+      height: 2px;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-right: 5px solid green;
+      display: inline-block;
+      margin-right: 5px;
+      margin-left: 5px;
+    
+    }
+    
+    .square {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      background-color: red;
+      margin-right: 5px; /* Espacio entre el cuadrado y el texto */
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 2rem; /* Margen ajustable según tus necesidades */
+    }
+    
+    .rectanguloFecha {
+      background-color: rgba(0, 0, 0, 0.459); /* Fondo semitransparente */
+      height: 70px;
+      border: 2px solid #ccc;
+      display: inline-flex;
+      align-items: center;
+      text-align: center;
+      width: 50rem;
+    }
+    
+    .rectangulo {
+      background-color: rgba(0, 0, 0, 0.459); /* Fondo semitransparente */
+      height: 120px;
+      border: 2px solid #ccc;
+      display: inline-flex;
+      align-items: center;
+      width: 50rem;
+      text-align: center;
+    }
+    
+    .rectanguloStats {
+      background-color: rgba(0, 0, 0, 0.459); /* Fondo semitransparente */
+      height: auto;
+      border: 2px solid #ccc;
+      align-items: center;
+      width: 50rem;
+      margin-bottom: 3rem;
+    }
+    
+    .rectanguloStatscasa {
+      background-color: rgba(0, 0, 0, 0.459); /* Fondo semitransparente */
+      height: auto;
+      border: 2px solid #ccc;
+      align-items: center;
+      width: 50rem;
+      margin-bottom: 3rem;
+    }
+    
+    @media (max-width: 780px) {
+    
+        .img_match {
+        max-width: 95%;
+      }
+    
+      .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: transparent;
+      padding: 1rem;
+      width: 100% ;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    
+          .content {
+            margin: 0; /* Reduce el margen en pantallas pequeñas */
+          }
+          .rectanguloFecha {
+          background-color: rgba(0, 0, 0, 0.459); /* Fondo semitransparente */
+          height: 70px;
+          border: 2px solid #ccc;
+          display: inline-flex;
+          align-items: center;
+          text-align: center;
+          width: auto;
+          margin-left: 5px;
+          margin-right: 5px;
+    
+        }
+        .rectangulo {
+          background-color: rgba(0, 0, 0, 0.459); /* Fondo semitransparente */
+          height: 120px;
+          border: 2px solid #ccc;
+          display: inline-flex;
+          align-items: center;
+          text-align: center;
+          width: auto;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+    
+        .rectanguloStats {
+            background-color: rgba(0, 0, 0, 0.459);
+        height: auto;
+        border: 2px solid #ccc;
+        align-items: center;
+        width: auto;
+        margin-left: 10.5rem;
+        margin-bottom: 3rem;
+        margin-left: 5px;
+          margin-right: 5px;
+        }
+    
+        .rectanguloStatscasa {
+            background-color: rgba(0, 0, 0, 0.459);
+        height: auto;
+        border: 2px solid #ccc;
+        width: auto;
+        margin-right: 9.5rem;
+        margin-bottom: 3rem;
+        margin-left: 5px;
+          margin-right: 5px;
+        }
+    }
+    
+    
+    .imagen-pequena {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      border-radius: 50%;
+      margin: 2rem;
+    }
+    
+    .numero, .numeroFecha, .numeroCF, .numeroEstadio {
+      text-align: center;
+      font-size: 24px;
+      display: inline-flex;
+      font-weight: bold;
+      color: white;
+      margin: 2rem;
+    }
+    
+    .stats{
+          text-align: right;
+          font-size: 16px;
+          color: white;
+          margin-right: 4rem;
+           }
+    
+    
+           .statscasa{
+          text-align: right;
+          font-size: 16px;
+          color: white;
+          margin-right: 4rem;
+           }
+    
+    
+    
+    @media (max-width: 780px) { /* Cambia el valor de 768px según lo que consideres un tamaño de pantalla "media" */
+    .numero{
+          text-align: center;
+          font-size: 18px;
+          display: inline-flex;
+          font-weight: bold;
+          color: white;
+          margin: 4px;
+           }
+    
+           .numeroFecha{
+          text-align: center;
+          font-size: 18px;
+          display: inline-flex;
+          font-weight: bold;
+          color: white;
+          margin: 17px !important;
+           }
+    
+           .numeroCF {
+          text-align: center;
+          font-size: 18px;
+          display: inline-flex;
+          font-weight: bold;
+          color: white;
+          margin: 17px !important;
+           }
+    
+           .numeroEstadio {
+          text-align: center;
+          font-size: 18px;
+          display: inline-flex;
+          font-weight: bold;
+          color: white;
+          margin: 17px !important;
+           }
+    
+    
+           .imagen-pequena {
+          width: 40px;
+          height: 40px;
+          display: inline-flex;
+          border-radius: 50%;
+          margin: 5px;
+        }
+    
+        .stats{
+            text-align: left;
+          font-size: 16px;
+          color: white;
+          margin-left: 2rem !important;
+          margin-right: 2rem !important;     }
+    
+           .statscasa{
+          text-align: left;
+          font-size: 16px;
+          color: white;
+          margin-left: 2rem !important;
+          margin-right: 2rem !important;
+    
+           }
+      }
+    </style>
+    
+    <style>
+      th button {
+          color: black;
+          cursor: pointer;
+          border:0;
+          background-color: transparent;
+        }
+    
+        th button:hover {
+          color: purple;
+        }
+    
+        .image-container {
+          text-align: center;
+          padding: 20px;
+        }
+          
+        img {
+          max-width: 50%;
+        }
+          td{
+            color: white;
+          }
+            html {
+              overflow-y: scroll;
+          background-image: url('FondoUds.png');
+          background-color: black;
+    
+          width: 100%;
+          background-size: cover;
+          background-repeat: repeat-y;
+          height: 100vh;
+          z-index: -1; 
+          }
+        /*Menu Secundario*/
+        nav .MenuSecundario {
+          display: none;
+        }
+        nav .MenuSecundario.open {
+          display: block;
+        }
+        
+        /* Estilos para el botón */
+        #toggle-menu {
+        margin-top: 2rem;
+          display: inline-block;
+      padding: 20px 40px;
+      background-color: #790079; /* Color de fondo */
+      color: white; /* Color del texto */
+      font-size: 16px;
+      border: 2px solid;
+      border-color: black;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+        }
+    
+        header .MenuSecundario {
+          margin-top: 20px;
+          background-color: black;
+          color: #333;
+          padding: 15px 0;
+          text-align: center;
+        }
+        
+        nav .MenuSecundario ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          background-color: black;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul .MenuSecundario li {
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+        }
+        
+        nav ul .MenuSecundario li a {
+          display: block;
+          padding: 10px 20px;
+          color: #333;
+          text-decoration: none;
+          font-size: 18px;
+          transition: background-color 0.3s ease;
+        }
+        
+        nav ul .MenuSecundario li a:hover {
+          background-color: #ff8000;
+          color: rgb(187, 26, 219);
+        }
+        
+        </style>
+        
+        
+    <style>
+          img{
+            max-width: 60%;
+          }
+        body {
+          margin: 0;
+          width: 100%;
+          padding: 0;
+          font-family: Arial, sans-serif;
+    
+          background-size: cover;
+          overflow: auto;
+        }
+        
+        .container {
+          max-width: 800px;
+          margin: 10px auto;
+          padding: 20px;
+          border-radius: 10px;
+        }
+        
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+        }
+        
+        th, td {
+          padding: 10px;
+          text-align: center;
+          border: 2px solid #ddd;
+          font-weight: bold;
+        }
+        
+        thead {
+          background-color: #f2f2f2;
+        }
+        
+        header {
+          color: #fff;
+          padding: 10px 0;
+        }
+        
+        nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 8px;
+          text-align: center;
+          border: 1px solid #fff; /* Borde para encuadrar el menú */
+          border-radius: 20px; /* Bordes redondeados */
+          background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+        }
+        
+        nav ul li {
+          display: inline-block;
+          margin: 0 20px;
+        }
+        
+        nav ul li a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 18px;
+        
+        }
+        
+      
+        footer {
+          background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+          color: #fff;
+          text-align: center;
+          padding: 0px 0;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+        }
+        
+        footer img {
+          
+          width: 20px;
+          height: 20px;
+          margin-right: 140px;
+          text-align: right;
+        }
+      </style>
+    
+    
