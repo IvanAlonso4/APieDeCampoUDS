@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="APieDeCampo.png" type="image/x-icon" sizes="16x16">
 <link rel="shortcut icon" href="../APieDeCampo.png" type="image/x-icon" sizes="16x16">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
 
 
   <link rel="stylesheet" href="styles.css">
@@ -35,7 +36,7 @@
       background: linear-gradient(45deg, #ffaaff, #6b006b);
       -webkit-background-clip: text;
       color: transparent;text-align: center; font-size: 50px;" >Asistencias 1º Vuelta</h1>  
-      <table style="margin-top: 100px;">
+      <table style="margin-top: 100px;" id="asistencias">
         <thead>
           <tr>
             <th style="background-color: rgb(199, 195, 195)"><b>NOMBRE</th>
@@ -44,6 +45,8 @@
           </tr>
         </thead>
         <tbody>
+                    <!--
+
             <tr>
                 <td>Jon Villanueva</td>
                 <td>0</td>
@@ -147,7 +150,8 @@
                 <td>0</td>
   
               </tr>
-              
+                        -->
+
               
           </tbody>
       </table>
@@ -162,6 +166,50 @@
   
   </body>
 </html>
+
+<script>
+  // Ruta al archivo Excel dentro de tu proyecto
+  var archivoExcel = '../SALAMANCA UDS 2324.xlsx';
+  var hojaDeseada = 'Estadisticas 1º Vuelta'; // Nombre de la hoja
+  var rangoTabla = 'Q2:R22'; // Rango de celdas que contiene la tabla
+
+  // Función para cargar y procesar la hoja específica
+  function cargarTablaDesdeExcel() {
+    var tabla = document.getElementById('asistencias');
+    var tbody = tabla.querySelector('tbody');
+
+    // Cargar el archivo Excel
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', archivoExcel, true);
+    xhr.responseType = 'arraybuffer';
+
+    xhr.onload = function (e) {
+      var arraybuffer = xhr.response;
+      var data = new Uint8Array(arraybuffer);
+      var workbook = XLSX.read(data, { type: 'array' });
+
+      // Acceder a la hoja deseada
+      var hoja = workbook.Sheets[hojaDeseada];
+
+      // Obtener los datos del rango de celdas de la tabla
+      var jsonData = XLSX.utils.sheet_to_json(hoja, { range: rangoTabla });
+
+      // Construir la tabla HTML con los datos de Excel
+      jsonData.forEach(function (fila) {
+        var row = tbody.insertRow();
+        for (var prop in fila) {
+          var cell = row.insertCell();
+          cell.innerHTML = fila[prop];
+        }
+      });
+    };
+
+    xhr.send();
+  }
+
+  // Llamar a la función para cargar la tabla deseada desde Excel
+  cargarTablaDesdeExcel();
+</script>
 
 <script>
   function sortTable(colIndex) {
