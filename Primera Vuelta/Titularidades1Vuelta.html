@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="APieDeCampo.png" type="image/x-icon" sizes="16x16">
 <link rel="shortcut icon" href="../APieDeCampo.png" type="image/x-icon" sizes="16x16">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
 
 
   <link rel="stylesheet" href="styles.css">
@@ -91,7 +92,7 @@
 
   // Función para cargar y mostrar la tabla específica
   function mostrarTabla() {
-    var tabla = document.getElementById('estadisticas');
+    var tabla = document.getElementById('tabla');
     
     // Cargar el archivo Excel
     var xhr = new XMLHttpRequest();
