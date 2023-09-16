@@ -83,17 +83,14 @@
 <script>
   // Ruta al archivo Excel dentro de tu proyecto
   var archivoExcel = 'SALAMANCA UDS 2324.xlsx';
+  var hojaDeseada = 'Estadisticas 1º Vuelta'; // Nombre de la hoja
+  var rangoTabla = 'B2:C22'; // Rango de celdas que contiene la tabla
 
-  // Nombre de la hoja que contiene la tabla
-  var nombreHoja = 'Estadisticas 1º Vuelta';
-
-  // Nombre de la tabla que deseas mostrar
-  var nombreTabla = 'Titularidades1Vuelta';
-
-  // Función para cargar y mostrar la tabla específica
-  function mostrarTabla() {
+  // Función para cargar y procesar la hoja específica
+  function cargarTablaDesdeExcel() {
     var tabla = document.getElementById('tabla');
-    
+    var tbody = tabla.querySelector('tbody');
+
     // Cargar el archivo Excel
     var xhr = new XMLHttpRequest();
     xhr.open('GET', archivoExcel, true);
@@ -104,22 +101,29 @@
       var data = new Uint8Array(arraybuffer);
       var workbook = XLSX.read(data, { type: 'array' });
 
-      // Acceder a la hoja específica por nombre
-      var hoja = workbook.Sheets[nombreHoja];
+      // Acceder a la hoja deseada
+      var hoja = workbook.Sheets[hojaDeseada];
 
-      // Acceder a la tabla por nombre
-      var tablaHTML = XLSX.utils.table_to_html(hoja, { id: nombreTabla });
+      // Obtener los datos del rango de celdas de la tabla
+      var jsonData = XLSX.utils.sheet_to_json(hoja, { range: rangoTabla });
 
-      // Mostrar la tabla en el elemento HTML correspondiente
-      tabla.innerHTML = tablaHTML;
+      // Construir la tabla HTML con los datos de Excel
+      jsonData.forEach(function (fila) {
+        var row = tbody.insertRow();
+        for (var prop in fila) {
+          var cell = row.insertCell();
+          cell.innerHTML = fila[prop];
+        }
+      });
     };
 
     xhr.send();
   }
 
-  // Llamar a la función para mostrar la tabla específica
-  mostrarTabla();
+  // Llamar a la función para cargar la tabla deseada desde Excel
+  cargarTablaDesdeExcel();
 </script>
+
 
 <!-- Elemento HTML donde se mostrará la tabla -->
 <div id="tabla"></div>
