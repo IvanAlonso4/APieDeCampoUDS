@@ -24,7 +24,23 @@
     </ul>
   </nav>
 </header>
+<header>
+  <nav>
+    <div style="text-align: center;"><button id="toggle-menu" style="text-align: center;">Estadisticas Detalladas</button></div>
+    
+    <ul class="MenuSecundario">
+      <li><a href="Primera Vuelta/Titularidades1Vuelta.html" style="font-size: 16px!important;">Titularidades</a></li>
+      <li><a href="Primera Vuelta/Minutos1Vuelta.html" style="font-size: 16px!important;">  Minutos Jugados </a></li>
+      <li><a href="Primera Vuelta/Amarillas1Vuelta.html" style="font-size: 16px!important;"> Tarjetas Amarillas</a></li>
+      <li><a href="Primera Vuelta/Rojas1Vuelta.html" style="font-size: 16px!important;"> Tarjetas Rojas</a></li>
+        <li><a href="Primera Vuelta/Goleadores1Vuelta.html" style="font-size: 16px!important;"> Goleadores </a></li>
+        <li><a href="Primera Vuelta/Asistentes1Vuelta.html" style="font-size: 16px!important;"> Asistentes </a></li>
+        <li><a href="Primera Vuelta/Once1Vuelta.html" style="font-size: 16px!important;"> Once Ideal </a></li>
 
+
+    </ul>
+  </nav>
+</header>
 <div class="background-image"></div>
 <body>
 
@@ -238,20 +254,20 @@
 </script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("toggle-menu");
-    const menu = document.querySelector("nav .MenuSecundario");
-  
-    toggleButton.addEventListener("click", function () {
-      menu.classList.toggle("open");
-      if (menu.classList.contains("open")) {
-        toggleButton.textContent = "Cerrar";
-      } else {
-        toggleButton.textContent = "Estadisticas";
-      }
-    });
+  document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById("toggle-menu");
+  const menu = document.querySelector("nav .MenuSecundario");
+
+  toggleButton.addEventListener("click", function () {
+    menu.classList.toggle("open");
+    if (menu.classList.contains("open")) {
+      toggleButton.textContent = "Cerrar";
+    } else {
+      toggleButton.textContent = "Estadisticas Detalladas";
+    }
   });
-  </script>
+});
+</script>
 
 
 <style>
@@ -304,6 +320,18 @@
       border: none;
       padding: 10px 15px;
       cursor: pointer;
+    }
+    #toggle-menu {
+      display: inline-block;
+  padding: 10px 20px;
+  background-color: #790079; /* Color de fondo */
+  color: white; /* Color del texto */
+  font-size: 16px;
+  border: 2px solid;
+  border-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
     }
     header .MenuSecundario {
       margin-top: 20px;
