@@ -112,18 +112,18 @@
 
 <script>
   // Ruta al archivo Excel dentro de tu proyecto
-  var archivoExcel = '../SALAMANCA UDS 2324.xlsx';
-  var hojaDeseada = 'Estadisticas 1º Vuelta'; // Nombre de la hoja
-  var rangoTabla = 'E2:F22'; // Rango de celdas que contiene la tabla
+  var archivoExcel1 = '../SALAMANCA UDS 2324.xlsx';
+  var hojaDeseada1 = 'Estadisticas 1º Vuelta'; // Nombre de la hoja
+  var rangoTabla1 = 'E2:F22'; // Rango de celdas que contiene la tabla
 
   // Función para cargar y procesar la hoja específica
-  function cargarTablaDesdeExcel() {
+  function cargarTabla1DesdeExcel() {
     var tabla = document.getElementById('minutos');
     var tbody = tabla.querySelector('tbody');
 
     // Cargar el archivo Excel
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', archivoExcel, true);
+    xhr.open('GET', archivoExcel1, true);
     xhr.responseType = 'arraybuffer';
 
     xhr.onload = function (e) {
@@ -132,10 +132,10 @@
       var workbook = XLSX.read(data, { type: 'array' });
 
       // Acceder a la hoja deseada
-      var hoja = workbook.Sheets[hojaDeseada];
+      var hoja = workbook.Sheets[hojaDeseada1];
 
       // Obtener los datos del rango de celdas de la tabla
-      var jsonData = XLSX.utils.sheet_to_json(hoja, { range: rangoTabla });
+      var jsonData = XLSX.utils.sheet_to_json(hoja, { range: rangoTabla1 });
 
       // Construir la tabla HTML con los datos de Excel
       jsonData.forEach(function (fila) {
@@ -151,14 +151,14 @@
   }
 
   // Llamar a la función para cargar la tabla deseada desde Excel
-  cargarTablaDesdeExcel();
+  cargarTabla1DesdeExcel();
 </script>
 
 <script>
   // Ruta al archivo Excel dentro de tu proyecto
-  var archivoExcel = '../SALAMANCA UDS 2324.xlsx';
-  var hojaDeseada = 'Estadisticas 1º Vuelta'; // Nombre de la hoja
-  var rangoTabla = 'U24:V33'; // Rango de celdas que contiene la tabla
+  var archivoExcel2 = '../SALAMANCA UDS 2324.xlsx';
+  var hojaDeseada2 = 'Estadisticas 1º Vuelta'; // Nombre de la hoja
+  var rangoTabla2 = 'U24:V33'; // Rango de celdas que contiene la tabla
 
   // Función para cargar y procesar la hoja específica
   function cargarTabla2DesdeExcel() {
@@ -167,7 +167,7 @@
 
     // Cargar el archivo Excel
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', archivoExcel, true);
+    xhr.open('GET', archivoExcel2, true);
     xhr.responseType = 'arraybuffer';
 
     xhr.onload = function (e) {
@@ -176,10 +176,10 @@
       var workbook = XLSX.read(data, { type: 'array' });
 
       // Acceder a la hoja deseada
-      var hoja = workbook.Sheets[hojaDeseada];
+      var hoja = workbook.Sheets[hojaDeseada2];
 
       // Obtener los datos del rango de celdas de la tabla
-      var jsonData = XLSX.utils.sheet_to_json(hoja, { range: rangoTabla });
+      var jsonData = XLSX.utils.sheet_to_json(hoja, { range: rangoTabla2 });
 
       // Construir la tabla HTML con los datos de Excel
       jsonData.forEach(function (fila) {
