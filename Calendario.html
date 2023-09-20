@@ -40,7 +40,7 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
   <select id="jornada">
           <!-- Opciones para las jornadas -->
           <option value="1">Jornada 1</option>
-          <option value="2">Jornada 2</option>
+          <option value="2" selected>Jornada 2</option>
           <option value="3">Jornada 3</option>
           <option value="4">Jornada 4</option>
           <option value="5">Jornada 5</option>
@@ -91,7 +91,7 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
 
         // Limpia el contenedor de resultados
         contenedorResultados.innerHTML = "";
-
+        jornada="Jornada 2";
         if (jornadaSeleccionada === "1") {
             // Mostrar los partidos para la jornada 1
             var partido1Jornada1 = `
@@ -168,7 +168,7 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
                     <p class="numero">-</p>
                     <p class="numero" style="font-size: 22px">0</p>
                     <p class="numero">Almazán</p>
-                    <img src="Imagenes Clubes/Bembibre.png" alt="Imagen 2" class="imagen-pequena">
+                    <img src="Imagenes Clubes/Almazan.png" alt="Imagen 2" class="imagen-pequena">
                 </div>
             </div>
             `;
@@ -215,19 +215,125 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
             contenedorResultados.innerHTML = partido1Jornada1 +partido2Jornada1 + partido3Jornada1 + partido4Jornada1 + partido5Jornada1 + partido6Jornada1 + partido7Jornada1 + partido8Jornada1 + partido9Jornada1;
         } else if (jornadaSeleccionada === "2") {
             // Mostrar los partidos para la jornada 2
-            var partido2 = `
+            var partido1Jornada2 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
                 <div class="rectangulo">
-                    <img src="Imagenes Clubes/sdLaguna.png" alt="Imagen 1" class="imagen-pequena">
-                    <p class="numero">SD. Laguna</p>
-                    <p class="numero" style="font-size: 22px">111</p>
+                    <img src="Imagenes Clubes/cydLeonesa.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Júpiter Leonés</p>
+                    <p class="numero" style="font-size: 22px">0</p>
                     <p class="numero">-</p>
-                    <p class="numero" style="font-size: 22px">200</p>
-                    <p class="numero">Atco. Bembibre</p>
-                    <img src="Imagenes Clubes/Bembibre.png" alt="Imagen 2" class="imagen-pequena">
+                    <p class="numero" style="font-size: 22px">1</p>
+                    <p class="numero">UD. Santa Marta</p>
+                    <img src="Imagenes Clubes/santaMarta.png" alt="Imagen 2" class="imagen-pequena">
                 </div>
+            </div>
+            `;
+            var partido2Jornada2 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/villaralbo.jpeg" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">CD. VIllaralbo</p>
+                    <p class="numero" style="font-size: 22px">2</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">1</p>
+                    <p class="numero">Becerril</p>
+                    <img src="Imagenes Clubes/CDBecerril.jpeg" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido3Jornada2 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/palenciacfsad.jpeg" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Palencia CF</p>
+                    <p class="numero" style="font-size: 22px">0</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">0</p>
+                    <p class="numero">Diocesanos Avila</p>
+                    <img src="Imagenes Clubes/colegios diocesanos.jpeg" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido4Jornada2 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                  <img src="Imagenes Clubes/Bembibre.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Atco. Bembibre</p>
+                    <p class="numero" style="font-size: 22px">1</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">2</p>
+                    <p class="numero">Palencia Cristo Atlético</p>
+                    <img src="Imagenes Clubes/PalenciaCristoAtletico.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido5Jornada2 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/Almazan.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Almazán</p>
+                    <p class="numero" style="font-size: 22px">1</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">4</p>
+                    <p class="numero">La Virgen del camino</p>
+                    <img src="Imagenes Clubes/LaVirgenDelCamino.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido6Jornada2 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/RealAvilaa.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Real Ávila</p>
+                    <p class="numero" style="font-size: 22px">6</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">0</p>
+                    <p class="numero">CD. Laguna</p>
+                    <img src="Imagenes Clubes/cdLaguna.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido7Jornada2 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="uds.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Salamanca UDS</p>
+                    <p class="numero" style="font-size: 22px">2</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">0</p>
+                    <p class="numero">Mirandés B</p>
+                    <img src="Imagenes Clubes/MirandesB.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido8Jornada2 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo">
+                    <img src="Imagenes Clubes/atleticoTordesillas.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Atco. Tordesillas</p>
+                    <p class="numero" style="font-size: 22px">3</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">1</p>
+                    <p class="numero">Atco. Astorga</p>
+                    <img src="Imagenes Clubes/atleticoastorga.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
+            `;
+            var partido9Jornada2 = `
+            <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+                <div class="rectangulo" style="margin-bottom: 5rem!important">
+                    <img src="Imagenes Clubes/BurgosB.png" alt="Imagen 1" class="imagen-pequena">
+                    <p class="numero">Burgos CF B</p>
+                    <p class="numero" style="font-size: 22px">2</p>
+                    <p class="numero">-</p>
+                    <p class="numero" style="font-size: 22px">0</p>
+                    <p class="numero">Ponferradina B</p>
+                    <img src="Imagenes Clubes/ponferradinaB.png" alt="Imagen 2" class="imagen-pequena">
+                </div>
+            </div>
             `;
             // Agregar partido2 al contenedor
-            contenedorResultados.innerHTML = partido2;
+            contenedorResultados.innerHTML = partido1Jornada2 +partido2Jornada2 + partido3Jornada2 + partido4Jornada2 + partido5Jornada2 + partido6Jornada2 + partido7Jornada2 + partido8Jornada2 + partido9Jornada2;
         }
         // Agrega más casos según las jornadas que tengas
     }
