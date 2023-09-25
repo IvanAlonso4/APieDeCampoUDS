@@ -40,8 +40,8 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
   <select id="jornada">
           <!-- Opciones para las jornadas -->
           <option value="1">Jornada 1</option>
-          <option value="2" selected>Jornada 2</option>
-          <option value="3">Jornada 3</option>
+          <option value="2" >Jornada 2</option>
+          <option value="3"selected>Jornada 3</option>
           <option value="4">Jornada 4</option>
           <option value="5">Jornada 5</option>
           <option value="6">Jornada 6</option>
@@ -91,7 +91,6 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
 
         // Limpia el contenedor de resultados
         contenedorResultados.innerHTML = "";
-        jornada="Jornada 2";
         if (jornadaSeleccionada === "1") {
             // Mostrar los partidos para la jornada 1
             var partido1Jornada1 = `
@@ -213,7 +212,8 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
             `;
             // Agregar partido1 al contenedor
             contenedorResultados.innerHTML = partido1Jornada1 +partido2Jornada1 + partido3Jornada1 + partido4Jornada1 + partido5Jornada1 + partido6Jornada1 + partido7Jornada1 + partido8Jornada1 + partido9Jornada1;
-        } else if (jornadaSeleccionada === "2") {
+        } 
+        else if (jornadaSeleccionada === "2") {
             // Mostrar los partidos para la jornada 2
             var partido1Jornada2 = `
             <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
@@ -335,7 +335,6 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
             // Agregar partido2 al contenedor
             contenedorResultados.innerHTML = partido1Jornada2 +partido2Jornada2 + partido3Jornada2 + partido4Jornada2 + partido5Jornada2 + partido6Jornada2 + partido7Jornada2 + partido8Jornada2 + partido9Jornada2;
         }
-        // Agrega más casos según las jornadas que tengas
         else if (jornadaSeleccionada === "3") {
             // Mostrar los partidos para la jornada 3
             var partido1Jornada3 = `
@@ -343,9 +342,9 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
                 <div class="rectangulo">
                     <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 1" class="imagen-pequena">
                     <p class="numero">CD Laguna</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">0</p>
                     <p class="numero">-</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">1</p>
                     <p class="numero">CD Villaralbo</p>
                     <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 2" class="imagen-pequena">
                 </div>
@@ -356,9 +355,9 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
                 <div class="rectangulo">
                     <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 1" class="imagen-pequena">
                     <p class="numero">Atco. Bembibre</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">0</p>
                     <p class="numero">-</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">1</p>
                     <p class="numero">Real Ávila</p>
                     <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 2" class="imagen-pequena">
                 </div>
@@ -369,9 +368,9 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
                 <div class="rectangulo">
                     <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 1" class="imagen-pequena">
                     <p class="numero">Mirandés B</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">2</p>
                     <p class="numero">-</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">1</p>
                     <p class="numero">SD Almazán</p>
                     <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 2" class="imagen-pequena">
                 </div>
@@ -382,9 +381,9 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
                 <div class="rectangulo">
                   <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 1" class="imagen-pequena">
                     <p class="numero">La Virgen del camino</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">1</p>
                     <p class="numero">-</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">2</p>
                     <p class="numero">Júpiter Leonés</p>
                     <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 2" class="imagen-pequena">
                 </div>
@@ -395,9 +394,9 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
                 <div class="rectangulo">
                     <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 1" class="imagen-pequena">
                     <p class="numero">UD. Santa Marta</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">1</p>
                     <p class="numero">-</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">2</p>
                     <p class="numero">Burgos CF B</p>
                     <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 2" class="imagen-pequena">
                 </div>
@@ -408,9 +407,9 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
                 <div class="rectangulo">
                     <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 1" class="imagen-pequena">
                     <p class="numero">Ponferradina B</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">1</p>
                     <p class="numero">-</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">3</p>
                     <p class="numero">Palencia CF</p>
                     <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 2" class="imagen-pequena">
                 </div>
@@ -421,9 +420,9 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
                 <div class="rectangulo">
                     <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 1" class="imagen-pequena">
                     <p class="numero">Diocesanos Ávila</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">0</p>
                     <p class="numero">-</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">1</p>
                     <p class="numero">Atco. Tordesillas</p>
                     <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 2" class="imagen-pequena">
                 </div>
@@ -434,9 +433,9 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
                 <div class="rectangulo">
                     <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 1" class="imagen-pequena">
                     <p class="numero">Palencia Cristo Atlético</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">1</p>
                     <p class="numero">-</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">2</p>
                     <p class="numero">Atco. Astorga</p>
                     <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 2" class="imagen-pequena">
                 </div>
@@ -447,9 +446,9 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
                 <div class="rectangulo" style="margin-bottom: 5rem!important">
                     <img src="Imagenes Clubes/Becerril.png" alt="Imagen 1" class="imagen-pequena">
                     <p class="numero">Becerril</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">0</p>
                     <p class="numero">-</p>
-                    <p class="numero" style="font-size: 22px"></p>
+                    <p class="numero" style="font-size: 22px">4</p>
                     <p class="numero">Salamanca UDS</p>
                     <img src="uds.png" alt="Imagen 2" class="imagen-pequena">
                 </div>
@@ -1687,7 +1686,6 @@ color: transparent;text-align: center; font-size: 50px;" >Calendario y Resultado
 
 
         }
-
         else if (jornadaSeleccionada === "14") {
           var partido1Jornada14 = `
     <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
@@ -1819,7 +1817,6 @@ var partido9Jornada14 = `
 contenedorResultados.innerHTML = partido1Jornada14 + partido2Jornada14 + partido3Jornada14 + partido4Jornada14 + partido5Jornada14 + partido6Jornada14 + partido7Jornada14 + partido8Jornada14 + partido9Jornada14;
 
         }
-
         else if (jornadaSeleccionada === "15") {
           var partido1Jornada15 = `
     <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
@@ -2082,7 +2079,6 @@ var partido9Jornada16 = `
 contenedorResultados.innerHTML = partido1Jornada16 + partido2Jornada16 + partido3Jornada16 + partido4Jornada16 + partido5Jornada16 + partido6Jornada16 + partido7Jornada16 + partido8Jornada16 + partido9Jornada16;
 
         }
-
         else if (jornadaSeleccionada === "17") {
           var partido1Jornada17 = `
     <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
@@ -2215,7 +2211,6 @@ contenedorResultados.innerHTML = partido1Jornada17 + partido2Jornada17 + partido
 
 
         }  
-
         else if (jornadaSeleccionada === "18") {
           var partido1Jornada18 = `
     <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
@@ -2347,7 +2342,6 @@ var partido9Jornada18 = `
 contenedorResultados.innerHTML = partido1Jornada18 + partido2Jornada18 + partido3Jornada18 + partido4Jornada18 + partido5Jornada18 + partido6Jornada18 + partido7Jornada18 + partido8Jornada18 + partido9Jornada18;
 
         }  
-
         else if (jornadaSeleccionada === "19") {
           var partido1Jornada19 = `
     <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
@@ -2479,42 +2473,1984 @@ var partido9Jornada19 = `
 contenedorResultados.innerHTML = partido1Jornada19 + partido2Jornada19 + partido3Jornada19 + partido4Jornada19 + partido5Jornada19 + partido6Jornada19 + partido7Jornada19 + partido8Jornada19 + partido9Jornada19;
 
         }  
-
         else if (jornadaSeleccionada === "20") {
-        
-        }  
+          var partido1Jornada20 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Villaralbo</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Laguna</p>
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
 
+var partido2Jornada20 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Real Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atco. Bembibre</p>
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada20 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">SD Almazán</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Mirandés B</p>
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada20 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Júpiter Leonés</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">La Virgen del Camino</p>
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada20 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Burgos CF B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">UD. Santa Marta</p>
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada20 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia CF</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Ponferradina B</p>
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada20 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atlético Tordesillas</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Diocesanos Ávila</p>
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada20 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atl. Astorga</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia Cristo Atlético</p>
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada20 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="uds.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Salamanca UDS</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Becerril</p>
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada20 + partido2Jornada20 + partido3Jornada20 + partido4Jornada20 + partido5Jornada20 + partido6Jornada20 + partido7Jornada20 + partido8Jornada20 + partido9Jornada20;
+
+        }  
         else if (jornadaSeleccionada === "21") {
-        
+          var partido1Jornada21 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia Cristo Atlético</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Real Ávila</p>
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada21 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atco. Bembibre</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Villaralbo</p>
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada21 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Laguna</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Salamanca UDS</p>
+            <img src="uds.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada21 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Becerril</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">SD Almazán</p>
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada21 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Mirandés B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Júpiter Leonés</p>
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada21 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">La Virgen del Camino</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Burgos CF B</p>
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada21 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">UD. Santa Marta</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia CF</p>
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada21 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Ponferradina B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atlético Tordesillas</p>
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada21 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Diocesanos Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atl. Astorga</p>
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada21 + partido2Jornada21 + partido3Jornada21 + partido4Jornada21 + partido5Jornada21 + partido6Jornada21 + partido7Jornada21 + partido8Jornada21 + partido9Jornada21;
+
         }  
 
         else if (jornadaSeleccionada === "22") {
-        
+          var partido1Jornada22 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Villaralbo</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Real Ávila</p>
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada22 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="uds.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Salamanca UDS</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atco. Bembibre</p>
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada22 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">SD Almazán</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Laguna</p>
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada22 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Júpiter Leonés</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Becerril</p>
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada22 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Burgos CF B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Mirandés B</p>
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada22 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia CF</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">La Virgen del Camino</p>
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada22 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atlético Tordesillas</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">UD. Santa Marta</p>
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada22 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atl. Astorga</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Ponferradina B</p>
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada22 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Diocesanos Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia Cristo Atlético</p>
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada22 + partido2Jornada22 + partido3Jornada22 + partido4Jornada22 + partido5Jornada22 + partido6Jornada22 + partido7Jornada22 + partido8Jornada22 + partido9Jornada22;
+
         }  
 
         else if (jornadaSeleccionada === "23") {
-        
+          var partido1Jornada23 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia Cristo Atlético</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Villaralbo</p>
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada23 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Real Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Salamanca UDS</p>
+            <img src="uds.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada23 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atco. Bembibre</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">SD Almazán</p>
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada23 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Laguna</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Júpiter Leonés</p>
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada23 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Becerril</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Burgos CF B</p>
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada23 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Mirandés B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia CF</p>
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada23 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">La Virgen del Camino</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atlético Tordesillas</p>
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada23 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">UD. Santa Marta</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atl. Astorga</p>
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada23 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Ponferradina B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Diocesanos Ávila</p>
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada23 + partido2Jornada23 + partido3Jornada23 + partido4Jornada23 + partido5Jornada23 + partido6Jornada23 + partido7Jornada23 + partido8Jornada23 + partido9Jornada23;
+
         }  
 
         else if (jornadaSeleccionada === "24") {
-        
+          var partido1Jornada24 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="uds.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Salamanca UDS</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Villaralbo</p>
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada24 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">SD Almazán</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Real Ávila</p>
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada24 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Júpiter Leonés</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atco. Bembibre</p>
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada24 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Burgos CF B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Laguna</p>
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada24 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia CF</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Becerril</p>
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada24 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atlético Tordesillas</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Mirandés B</p>
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada24 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atl. Astorga</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">La Virgen del Camino</p>
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada24 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Diocesanos Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">UD. Santa Marta</p>
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada24 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Ponferradina B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia Cristo Atlético</p>
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada24 + partido2Jornada24 + partido3Jornada24 + partido4Jornada24 + partido5Jornada24 + partido6Jornada24 + partido7Jornada24 + partido8Jornada24 + partido9Jornada24;
+
         }  
 
         else if (jornadaSeleccionada === "25") {
-        
+          var partido1Jornada25 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia Cristo Atlético</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Salamanca UDS</p>
+            <img src="uds.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada25 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Villaralbo</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">SD Almazán</p>
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada25 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Real Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Júpiter Leonés</p>
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada25 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atco. Bembibre</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Burgos CF B</p>
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada25 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Laguna</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia CF</p>
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada25 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Becerril</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atlético Tordesillas</p>
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada25 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Mirandés B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atl. Astorga</p>
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada25 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">La Virgen del Camino</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Diocesanos Ávila</p>
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada25 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">UD. Santa Marta</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Ponferradina B</p>
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada25 + partido2Jornada25 + partido3Jornada25 + partido4Jornada25 + partido5Jornada25 + partido6Jornada25 + partido7Jornada25 + partido8Jornada25 + partido9Jornada25;
+
         }  
 
         else if (jornadaSeleccionada === "26") {
-        
+          var partido1Jornada26 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">SD Almazán</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Salamanca UDS</p>
+            <img src="uds.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada26 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Júpiter Leonés</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Villaralbo</p>
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada26 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Burgos CF B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Real Ávila</p>
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada26 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia CF</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atco. Bembibre</p>
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada26 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atlético Tordesillas</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Laguna</p>
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada26 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atl. Astorga</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Becerril</p>
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada26 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Diocesanos Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Mirandés B</p>
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada26 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Ponferradina B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">La Virgen del Camino</p>
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada26 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">UD. Santa Marta</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia Cristo Atlético</p>
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada26 + partido2Jornada26 + partido3Jornada26 + partido4Jornada26 + partido5Jornada26 + partido6Jornada26 + partido7Jornada26 + partido8Jornada26 + partido9Jornada26;
+
         }  
 
         else if (jornadaSeleccionada === "27") {
-        
+          var partido1Jornada27 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia Cristo Atlético</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">SD Almazán</p>
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada27 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="uds.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Salamanca UDS</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Júpiter Leonés</p>
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada27 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Villaralbo</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Burgos CF B</p>
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada27 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Real Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia CF</p>
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada27 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atco. Bembibre</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atlético Tordesillas</p>
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada27 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Laguna</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atl. Astorga</p>
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada27 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Becerril</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Diocesanos Ávila</p>
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada27 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Mirandés B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Ponferradina B</p>
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada27 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">La Virgen del Camino</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">UD. Santa Marta</p>
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada27 + partido2Jornada27 + partido3Jornada27 + partido4Jornada27 + partido5Jornada27 + partido6Jornada27 + partido7Jornada27 + partido8Jornada27 + partido9Jornada27;
+
         }  
 
         else if (jornadaSeleccionada === "28") {
-        
+          var partido1Jornada28 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Júpiter Leonés</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">SD Almazán</p>
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada28 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Burgos CF B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Salamanca UDS</p>
+            <img src="uds.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada28 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia CF</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Villaralbo</p>
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada28 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atlético Tordesillas</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Real Ávila</p>
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada28 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atl. Astorga</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atco. Bembibre</p>
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada28 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Diocesanos Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Laguna</p>
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada28 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Ponferradina B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Becerril</p>
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada28 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">UD. Santa Marta</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Mirandés B</p>
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada28 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">La Virgen del Camino</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia Cristo Atlético</p>
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada28 + partido2Jornada28 + partido3Jornada28 + partido4Jornada28 + partido5Jornada28 + partido6Jornada28 + partido7Jornada28 + partido8Jornada28 + partido9Jornada28;
+
         }  
+
+        else if (jornadaSeleccionada === "29") {
+          var partido1Jornada29 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia Cristo Atlético</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Júpiter Leonés</p>
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada29 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">SD Almazán</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Burgos CF B</p>
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada29 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="uds.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Salamanca UDS</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia CF</p>
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada29 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Villaralbo</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atlético Tordesillas</p>
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada29 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Real Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atl. Astorga</p>
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada29 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atco. Bembibre</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Diocesanos Ávila</p>
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada29 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Laguna</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Ponferradina B</p>
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada29 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Becerril</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">UD. Santa Marta</p>
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada29 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Mirandés B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">La Virgen del Camino</p>
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada29 + partido2Jornada29 + partido3Jornada29 + partido4Jornada29 + partido5Jornada29 + partido6Jornada29 + partido7Jornada29 + partido8Jornada29 + partido9Jornada29;
+
+      }  
+
+      else if (jornadaSeleccionada === "30") {
+        var partido1Jornada30 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Burgos CF B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Júpiter Leonés</p>
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada30 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia CF</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">SD Almazán</p>
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada30 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atlético Tordesillas</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Salamanca UDS</p>
+            <img src="uds.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada30 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atl. Astorga</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Villaralbo</p>
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada30 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Diocesanos Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Real Ávila</p>
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada30 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Ponferradina B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atco. Bembibre</p>
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada30 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">UD. Santa Marta</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Laguna</p>
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada30 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">La Virgen del Camino</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Becerril</p>
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada30 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Mirandés B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia Cristo Atlético</p>
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada30 + partido2Jornada30 + partido3Jornada30 + partido4Jornada30 + partido5Jornada30 + partido6Jornada30 + partido7Jornada30 + partido8Jornada30 + partido9Jornada30;
+
+      }  
+
+      else if (jornadaSeleccionada === "31") {
+        var partido1Jornada31 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia Cristo Atlético</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Burgos CF B</p>
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada31 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Júpiter Leonés</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia CF</p>
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada31 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">SD Almazán</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atlético Tordesillas</p>
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada31 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="uds.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Salamanca UDS</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atl. Astorga</p>
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada31 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Villaralbo</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Diocesanos Ávila</p>
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada31 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Real Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Ponferradina B</p>
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada31 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atco. Bembibre</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">UD. Santa Marta</p>
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada31 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Laguna</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">La Virgen del Camino</p>
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada31 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Becerril</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Mirandés B</p>
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada31 + partido2Jornada31 + partido3Jornada31 + partido4Jornada31 + partido5Jornada31 + partido6Jornada31 + partido7Jornada31 + partido8Jornada31 + partido9Jornada31;
+
+      }  
+
+      else if (jornadaSeleccionada === "32") {
+        var partido1Jornada32 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia CF</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Burgos CF B</p>
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada32 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atlético Tordesillas</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Júpiter Leonés</p>
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada32 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atl. Astorga</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">SD Almazán</p>
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada32 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Diocesanos Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Salamanca UDS</p>
+            <img src="uds.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada32 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Ponferradina B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Villaralbo</p>
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada32 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">UD. Santa Marta</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Real Ávila</p>
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada32 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">La Virgen del Camino</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atco. Bembibre</p>
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada32 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Mirandés B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Laguna</p>
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada32 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Becerril</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia Cristo Atlético</p>
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada32 + partido2Jornada32 + partido3Jornada32 + partido4Jornada32 + partido5Jornada32 + partido6Jornada32 + partido7Jornada32 + partido8Jornada32 + partido9Jornada32;
+
+      }  
+
+      else if (jornadaSeleccionada === "33") {
+        var partido1Jornada33 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia CF</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia Cristo Atlético</p>
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada33 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Burgos CF B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atlético Tordesillas</p>
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada33 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Júpiter Leonés</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atl. Astorga</p>
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada33 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">SD Almazán</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Diocesanos Ávila</p>
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada33 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="uds.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Salamanca UDS</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Ponferradina B</p>
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada33 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Villaralbo</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">UD. Santa Marta</p>
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada33 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Real Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">La Virgen del Camino</p>
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada33 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atco. Bembibre</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Mirandés B</p>
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada33 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">CD. Laguna</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Becerril</p>
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada33 + partido2Jornada33 + partido3Jornada33 + partido4Jornada33 + partido5Jornada33 + partido6Jornada33 + partido7Jornada33 + partido8Jornada33 + partido9Jornada33;
+
+      }  
+
+      else if (jornadaSeleccionada === "34") {
+        var partido1Jornada34 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atlético Tordesillas.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atlético Tordesillas</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Palencia CF</p>
+            <img src="Imagenes Clubes/Palencia CF.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido2Jornada34 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Atl. Astorga.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Atl. Astorga</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Burgos CF B</p>
+            <img src="Imagenes Clubes/Burgos CF B.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido3Jornada34 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Diocesanos Ávila.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Diocesanos Ávila</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Júpiter Leonés</p>
+            <img src="Imagenes Clubes/Júpiter Leonés.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido4Jornada34 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Ponferradina B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Ponferradina B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">SD Almazán</p>
+            <img src="Imagenes Clubes/SD Almazán.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido5Jornada34 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/UD. Santa Marta.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">UD. Santa Marta</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Salamanca UDS</p>
+            <img src="uds.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido6Jornada34 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/La Virgen del Camino.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">La Virgen del Camino</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Villaralbo</p>
+            <img src="Imagenes Clubes/CD. Villaralbo.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido7Jornada34 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Mirandés B.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Mirandés B</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Real Ávila</p>
+            <img src="Imagenes Clubes/Real Ávila.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido8Jornada34 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Becerril.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Becerril</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">Atco. Bembibre</p>
+            <img src="Imagenes Clubes/Atco. Bembibre.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+var partido9Jornada34 = `
+    <div class="content" style="text-align: center; margin: 0rem 0rem 0rem 0rem ;">
+        <div class="rectangulo">
+            <img src="Imagenes Clubes/Palencia Cristo Atlético.png" alt="Imagen 1" class="imagen-pequena">
+            <p class="numero">Palencia Cristo Atlético</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">-</p>
+            <p class="numero" style="font-size: 22px"></p>
+            <p class="numero">CD. Laguna</p>
+            <img src="Imagenes Clubes/CD. Laguna.png" alt="Imagen 2" class="imagen-pequena">
+        </div>
+    </div>
+    `;
+
+// Agregar partidos al contenedor
+contenedorResultados.innerHTML = partido1Jornada34 + partido2Jornada34 + partido3Jornada34 + partido4Jornada34 + partido5Jornada34 + partido6Jornada34 + partido7Jornada34 + partido8Jornada34 + partido9Jornada34;
+
+      }  
 
 
     }
